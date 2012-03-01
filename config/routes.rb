@@ -1,4 +1,14 @@
 SimplePayment::Application.routes.draw do
+  
+  resources :payments do
+    
+  end
+  
+  get '/thank-you' => 'payments#thankyou', :as => :thankyou
+  
+  
+  root :to => 'payments#new'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

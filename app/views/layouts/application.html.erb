@@ -4,11 +4,19 @@
   <title>SimplePayment</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
+  
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+	
+	<div class="container">
+		<div class="row">
+			<div class="span6 offset2">
+				<%= yield %>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>
